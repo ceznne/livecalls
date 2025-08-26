@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arapey', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #c2682e; /* Orange color for emphasis */
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-decoration: underline wavy;
+  text-decoration-color: #fff;
+  text-underline-offset: 4px;
+}
+
+.btn {
+  background: linear-gradient(180deg, #c2682e, #8b3d1c);
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, #8b3d1c, #c2682e);
+  transform: scale(1.05);
+}
