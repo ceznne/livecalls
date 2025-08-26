@@ -3,101 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collect Phone Numbers</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #1a1a1a;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .btn {
-      background-color: #007bff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    .modal-bg {
-      position: fixed;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.7);
-      display: none;
-      justify-content: center;
-      align-items: center;
-    }
-    .modal {
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
-      width: 300px;
-    }
-    .modal input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 6px;
-      border: 1px solid #555;
-      background: #333;
-      color: white;
-    }
-    .modal button {
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
-      background: #28a745;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-    }
-  </style>
+  <title>One Person Business</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arapey&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <button class="btn" id="openModal">Get Started</button>
-
-  <div class="modal-bg" id="modalBg">
-    <div class="modal">
-      <h2>Enter Your Details</h2>
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      <button id="submitBtn">Submit</button>
-    </div>
+  <div class="container">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>Start Your <span class="highlight">ONE PERSON BUSINESS</span></h1>
+    <p>Watch Our Previous <strong>Live Calls</strong> [FREE]</p>
+    <a href="#" class="btn">WATCH</a>
   </div>
-
-  <script>
-    const openModal = document.getElementById('openModal');
-    const modalBg = document.getElementById('modalBg');
-    const submitBtn = document.getElementById('submitBtn');
-
-    openModal.addEventListener('click', () => {
-      modalBg.style.display = 'flex';
-    });
-
-    submitBtn.addEventListener('click', () => {
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-
-      if(!name || !phone) {
-        alert('Please fill both fields');
-        return;
-      }
-
-      // Here you can connect to your backend / Google Sheet / SMS service
-      console.log('Name:', name, 'Phone:', phone);
-      alert('Thanks! We will contact you via WhatsApp/SMS.');
-
-      modalBg.style.display = 'none';
-      document.getElementById('name').value = '';
-      document.getElementById('phone').value = '';
-    });
-  </script>
-
 </body>
 </html>
+
